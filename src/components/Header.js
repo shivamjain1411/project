@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import { IoCaretForward } from "react-icons/io5";
 import { FaBell } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import logo from "../Images/royal_games_logo.png";
 
 function Header() {
   const [login, setLogin] = useState(true); // State to manage login
   const [dropdownOpen, setDropdownOpen] = useState(false); // State to manage dropdown visibility
+  const navigate = useNavigate(); // Create a navigate function
 
   const handleLogout = () => {
     // Handle logout logic here
     setLogin(false);
     setDropdownOpen(false); // Close the dropdown on logout
+  };
+
+  const handleLoginClick = () => {
+    navigate("/login"); // Redirect to the login page
   };
 
   return (
@@ -80,7 +86,7 @@ function Header() {
             </div>
           ) : (
             <button
-              onClick={() => setLogin(true)}
+              onClick={handleLoginClick} // Redirect to login page
               className="text-white hover:text-yellow-400 font-bold"
             >
               Login
