@@ -1,18 +1,45 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./pages/Home";
-import { Route, Routes } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import Header from "./components/Header";
+import Body from "./components/Body";
 
-function App() {
+const AppLayout = () => {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+    <div className="app">
+      <Header />
+      <Outlet />
     </div>
   );
+};
+
+export const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+]);
+
+function App() {
+  return <div className="App">{appRouter}</div>;
 }
 
 export default App;
