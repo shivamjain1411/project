@@ -3,7 +3,7 @@ import { IoCaretForward } from "react-icons/io5";
 import { FaBell } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import logo from "../Images/royal_games_logo.png";
-import "./Header.css";
+import "../CSS/Header.css"
 
 function Header() {
   const [login, setLogin] = useState(true);
