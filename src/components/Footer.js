@@ -1,19 +1,29 @@
 import React from "react";
 import logo_only from "../Images/royal_logo_only.png";
-import name from "../Images/royal_games_logo.png";
-import { FaDiscord } from "react-icons/fa";
+import name from "../Images/logo-name.png";
 import { SocialIcon } from "react-social-icons";
 function Footer() {
   return (
     <div className="p-8 bg-[#140934] pt-12">
       <div className="flex flex-col justify-center items-center ">
-        <div>
-          <img src={logo_only} className="w-36 h-36 " />
+        <div className="border-0 border-b-2 border-white p-2 w-6/12">
+          <div className="flex flex-col justify-center items-center border-0 border-b-2 border-dashed border-white ">
+            <div>
+              <img src={logo_only} className="w-36 h-36 " />
+            </div>
+            <div className="">
+              <img
+                src={name}
+                className="h-20 border-0 border-b-2 border-white "
+              />
+            </div>
+            <div className="text-white font-bold">
+              © 2024 Royalgames.com | All Rights Reserved
+            </div>
+            <br />
+          </div>
         </div>
-        <div>
-          <img src={name} className="h-24 " />
-          <br />
-        </div>
+
         <div>
           <p className="text-white font-bold">Contact Us | Follow Us</p>
         </div>

@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Image from "./components/Image";
 import Footer from "./components/Footer";
+import GamePage from "./pages/GamePage";
 
 const AppLayout = () => {
   return (
@@ -36,6 +37,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/image",
         element: <Image />,
+      },
+      {
+        path: "/gameinfo",
+        element: <GamePage />,
       },
     ],
   },
