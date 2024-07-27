@@ -3,7 +3,7 @@ import { IoCaretForward } from "react-icons/io5";
 import { FaBell } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import logo from "../Images/royal_games_logo.png";
-import "../CSS/Header.css"
+import "../CSS/Header.css";
 
 function Header() {
   const [login, setLogin] = useState(true);
@@ -35,7 +35,7 @@ function Header() {
 
   return (
     <div className="top-0">
-      <div className="bg-gradient-to-r from-[#140934] to-[#35188c] flex py-4 px-8">
+      <div className="bg-gradient-to-r from-[#140934] to-[#35188c] flex py-1 px-8">
         <div className="w-4/12 flex items-center">
           <img className="h-16" src={logo} alt="Logo" />
         </div>

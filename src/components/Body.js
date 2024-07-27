@@ -5,6 +5,11 @@ import img2 from "../Images/corousal_img_2.jpeg";
 import img3 from "../Images/corousal_img_3.jpeg";
 import img4 from "../Images/corousal_img_4.jpeg";
 import img5 from "../Images/corousal_img_5.jpeg";
+import live_game_1 from "../Images/live_game_1.jpeg";
+import live_game_2 from "../Images/live_game_2.jpeg";
+import live_game_3 from "../Images/live_game_3.jpeg";
+import live_game_4 from "../Images/live_game_4.jpeg";
+import live_game_5 from "../Images/live_game_5.jpeg";
 
 function Body() {
   // Set up state using React hooks
@@ -32,8 +37,8 @@ function Body() {
         backgroundImage: `url(${background_gif})`,
       }}
     >
-      <div className="p-16">
-        <div className="relative w-full flex  overflow-hidden shadow-2xl h-64">
+      <div className="p-8">
+        <div className="relative w-full flex overflow-hidden shadow-2xl h-56">
           <div className="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
             <span>{currentIndex + 1}</span> / <span>{images.length}</span>
           </div>
@@ -49,7 +54,7 @@ function Body() {
               <img
                 src={image}
                 alt={`Slide ${index + 1}`}
-                className="w-full opacity-100"
+                className="w-full opacity-100 h-56"
               />
             </figure>
           ))}
@@ -93,6 +98,93 @@ function Body() {
               ></path>
             </svg>
           </button>
+        </div>
+        <div className="relative w-full flex flex-col mt-6">
+          <h1 className="text-orange-300 font-bold">LIVE RESULTS</h1>
+          <div className=" flex">
+            <div className="w-48 h-14 mt-4 mr-3 rounded-3xl bg-gradient-to-l from-[#140934] to-[#35188c] flex items-center">
+              <div className=" flex">
+                <div>
+                  <img
+                    className="w-16 h-12 pl-1 border-2 border-yellow-400 rounded-full"
+                    src="https://img.freepik.com/free-photo/portrait-woman-gambling-casino_23-2151007837.jpg?t=st=1722057259~exp=1722060859~hmac=a94fed79574dfd9e02791ee0e54b6848362f9793132cdafdf599d208b24beb6f&w=996"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <h1 className="text-white text-xl font-bold pl-3 pr-6">
+                    TAJ
+                  </h1>
+                </div>
+                <div className="flex items-center justify-center rounded-full bg-yellow-500 w-12">
+                  <h1 className="text-white text-2xl font-bold">93</h1>
+                </div>
+              </div>
+            </div>
+            <div className="w-48 h-14 mt-4 mr-3 rounded-3xl bg-gradient-to-l from-[#140934] to-[#35188c] flex items-center">
+              <div className=" flex">
+                <div>
+                  <img
+                    className="w-16 h-12 pl-1 border-2 border-green-400 rounded-full"
+                    src="https://img.freepik.com/free-photo/portrait-woman-gambling-casino_23-2151007837.jpg?t=st=1722057259~exp=1722060859~hmac=a94fed79574dfd9e02791ee0e54b6848362f9793132cdafdf599d208b24beb6f&w=996"
+                  />
+                </div>
+                <div className="flex items-center">
+                  <h1 className="text-white text-xl font-bold pl-3 pr-6">
+                    TAJ
+                  </h1>
+                </div>
+                <div className="flex items-center justify-center rounded-full bg-green-500 w-12">
+                  <h1 className="text-white text-2xl font-bold">93</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 className="text-orange-300 font-bold mt-4">LIVE GAMES</h1>
+          <div className="flex py-2 overflow-x-auto mt-6 space-x-8">
+            {" "}
+            {/* Added space-x-8 for consistent spacing */}
+            <div className="flex-shrink-0 bg-gradient-to-b from-transparent to-yellow-400">
+              {" "}
+              {/* Ensures that images don't grow */}
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+              <div className="">
+                <h1>FARIDABAD</h1>
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_2} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_3} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_4} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_5} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+            <div className="flex-shrink-0">
+              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

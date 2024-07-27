@@ -11,6 +11,7 @@ import {
 import LoginPage from "./pages/LoginPage";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Image from "./components/Image";
 
 const AppLayout = () => {
   return (
@@ -29,6 +30,10 @@ export const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
+      },
+      {
+        path: "/image",
+        element: <Image />,
       },
     ],
   },
