@@ -10,6 +10,7 @@ import live_game_2 from "../Images/live_game_2.jpeg";
 import live_game_3 from "../Images/live_game_3.jpeg";
 import live_game_4 from "../Images/live_game_4.jpeg";
 import live_game_5 from "../Images/live_game_5.jpeg";
+import Footer from "./Footer";
 
 function Body() {
   // Set up state using React hooks

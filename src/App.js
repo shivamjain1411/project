@@ -12,12 +12,14 @@ import LoginPage from "./pages/LoginPage";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Image from "./components/Image";
+import Footer from "./components/Footer";
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
