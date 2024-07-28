@@ -1,22 +1,18 @@
 import React from "react";
 
-const GameCard = ({ img, color, city }) => {
-    console.log(img, color, city);
+const GameCard = ({ img, city, color }) => {
   return (
     <div>
       <div className="relative w-44 h-48 rounded-xl overflow-hidden flex-shrink-0">
         {/* Image with Gradient Overlay */}
         <div
-          className={`absolute inset-0 bg-gradient-to-t from-${color} via-transparent to-transparent`}
+          className="absolute inset-0"
           style={{
+            backgroundImage: `linear-gradient(to top, ${color},transparent,transparent)`,
             zIndex: 1,
           }}
         ></div>
-        <img
-          className="w-full h-full object-cover"
-          src={img}
-          alt={city}
-        />
+        <img className="w-full h-full object-cover" src={img} alt={city} />
 
         {/* Text Overlay */}
         <div
@@ -28,6 +24,10 @@ const GameCard = ({ img, color, city }) => {
       </div>
     </div>
   );
+};
+
+GameCard.defaultProps = {
+  color: "blue",
 };
 
 export default GameCard;
