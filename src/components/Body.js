@@ -144,12 +144,28 @@ function Body() {
           <div className="flex py-2 overflow-x-auto mt-6 space-x-8">
             {" "}
             {/* Added space-x-8 for consistent spacing */}
-            <div className="flex-shrink-0 bg-gradient-to-b from-transparent to-yellow-400">
-              {" "}
-              {/* Ensures that images don't grow */}
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-              <div className="">
-                <h1>FARIDABAD</h1>
+            <div className="relative w-44 h-48 rounded-xl overflow-hidden flex-shrink-0">
+              {/* Image with Gradient Overlay */}
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-blue-600 via-transparent to-transparent"
+                style={{
+                  zIndex: 1,
+                }}
+              ></div>
+              <img
+                className="w-full h-full object-cover"
+                src={live_game_1}
+                alt="Live Game"
+              />
+
+              {/* Text Overlay */}
+              <div
+                className="absolute inset-0 flex justify-center items-end pb-4"
+                style={{ zIndex: 2 }}
+              >
+                <h1 className="text-white text-xl font-bold shadow-lg">
+                  FARIDABAD
+                </h1>
               </div>
             </div>
             <div className="flex-shrink-0">
