@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const GameCard = () => {
+    const color = "blue";
   return (
     <div>
       <div className="relative w-44 h-48 rounded-xl overflow-hidden flex-shrink-0">
@@ -10,7 +11,7 @@ const GameCard = () => {
                 className="absolute inset-0 bg-gradient-to-t from-blue-600 via-transparent to-transparent"
                 style={{
                   zIndex: 1,
-                  
+
                 }}
               ></div>
               <img
