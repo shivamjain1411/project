@@ -11,6 +11,7 @@ import live_game_3 from "../Images/live_game_3.jpeg";
 import live_game_4 from "../Images/live_game_4.jpeg";
 import live_game_5 from "../Images/live_game_5.jpeg";
 import Footer from "./Footer";
+import GameCard from "./GameCard";
 
 function Body() {
   // Set up state using React hooks
@@ -32,6 +33,7 @@ function Body() {
   };
 
   return (
+    <>
     <div
       className="relative h-screen bg-cover bg-center"
       style={{
@@ -144,67 +146,13 @@ function Body() {
           <div className="flex py-2 overflow-x-auto mt-6 space-x-8">
             {" "}
             {/* Added space-x-8 for consistent spacing */}
-            <div className="relative w-44 h-48 rounded-xl overflow-hidden flex-shrink-0">
-              {/* Image with Gradient Overlay */}
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-blue-600 via-transparent to-transparent"
-                style={{
-                  zIndex: 1,
-                }}
-              ></div>
-              <img
-                className="w-full h-full object-cover"
-                src={live_game_1}
-                alt="Live Game"
-              />
-
-              {/* Text Overlay */}
-              <div
-                className="absolute inset-0 flex justify-center items-end pb-4"
-                style={{ zIndex: 2 }}
-              >
-                <h1 className="text-white text-xl font-bold shadow-lg">
-                  FARIDABAD
-                </h1>
-              </div>
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_2} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_3} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_4} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_5} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
-            <div className="flex-shrink-0">
-              <img className="w-44 h-48 rounded-xl" src={live_game_1} />
-            </div>
+            <GameCard />
+            
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }
 
