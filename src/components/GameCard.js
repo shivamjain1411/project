@@ -1,7 +1,7 @@
 import React from "react";
 
-const GameCard = () => {
-  const color = "blue-600";
+const GameCard = ({ img, color, city }) => {
+    console.log(img, color, city);
   return (
     <div>
       <div className="relative w-44 h-48 rounded-xl overflow-hidden flex-shrink-0">
@@ -14,8 +14,8 @@ const GameCard = () => {
         ></div>
         <img
           className="w-full h-full object-cover"
-          // src={live_game_1}
-          alt="Live Game"
+          src={img}
+          alt={city}
         />
 
         {/* Text Overlay */}
@@ -23,7 +23,7 @@ const GameCard = () => {
           className="absolute inset-0 flex justify-center items-end pb-4"
           style={{ zIndex: 2 }}
         >
-          <h1 className="text-white text-xl font-bold shadow-lg">FARIDABAD</h1>
+          <h1 className="text-white text-xl font-bold shadow-lg">{city}</h1>
         </div>
       </div>
     </div>

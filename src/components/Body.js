@@ -5,13 +5,41 @@ import img2 from "../Images/corousal_img_2.jpeg";
 import img3 from "../Images/corousal_img_3.jpeg";
 import img4 from "../Images/corousal_img_4.jpeg";
 import img5 from "../Images/corousal_img_5.jpeg";
-import live_game_1 from "../Images/live_game_1.jpeg";
+import live_game_3 from "../Images/live_game_1.jpeg";
 import live_game_2 from "../Images/live_game_2.jpeg";
-import live_game_3 from "../Images/live_game_3.jpeg";
-import live_game_4 from "../Images/live_game_4.jpeg";
-import live_game_5 from "../Images/live_game_5.jpeg";
+import live_game_1 from "../Images/live_game_3.jpeg";
+import live_game_5 from "../Images/live_game_4.jpeg";
+import live_game_4 from "../Images/live_game_5.jpeg";
 import Footer from "./Footer";
 import GameCard from "./GameCard";
+
+const data = [
+  {
+    img: live_game_1,
+    color: "blue-600",
+    city: "TAJ"
+  },
+  {
+    img: live_game_2,
+    color: "blue-600",
+    city: "DESHAWAR"
+  },
+  {
+    img: live_game_3,
+    color: "blue-600",
+    city: "FARIDABAD"
+  },
+  {
+    img: live_game_4,
+    color: "blue-600",
+    city: "GHAZIABAD"
+  },
+  {
+    img: live_game_5,
+    color: "blue-600",
+    city: "GALI" 
+  }
+];
 
 function Body() {
   // Set up state using React hooks
@@ -144,10 +172,9 @@ function Body() {
           </div>
           <h1 className="text-orange-300 font-bold mt-4">LIVE GAMES</h1>
           <div className="flex py-2 overflow-x-auto mt-6 space-x-8">
-            {" "}
-            {/* Added space-x-8 for consistent spacing */}
-            <GameCard />
-            
+            {data.map((game, index) => (
+              <GameCard key={index} img={game.img} color={game.color} city={game.city} />
+            ))}
           </div>
         </div>
       </div>
