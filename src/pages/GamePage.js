@@ -14,7 +14,7 @@ function GamePage() {
         yellowColor="#FFD700" // Use any color you want here
       />
       <GameBody
-        initialTotalAmount={500}
+        initialTotalAmount={0}
         maxAmount={5000}
         numbers={Array.from({ length: 100 }, (_, i) => i)} // Pass numbers
         primaryColor="#FFD700" // Gold

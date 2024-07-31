@@ -11,9 +11,18 @@ function GameBody({
   betButtonText,
 }) {
   const [totalAmount, setTotalAmount] = useState(initialTotalAmount);
+  const [clickedNumbers, setClickedNumbers] = useState([]);
 
   // Make sure numbers is defined, otherwise set to an empty array
   const validNumbers = numbers || [];
+
+  // Handle button click to update state
+  const handleNumberClick = (num) => {
+    if (!clickedNumbers.includes(num)) {
+      setClickedNumbers([...clickedNumbers, num]);
+      setTotalAmount((prevAmount) => prevAmount + 100);
+    }
+  };
 
   return (
     <div>
@@ -59,14 +68,20 @@ function GameBody({
                 {num === 91 && <div className="col-span-2" />}
 
                 <button
+                  onClick={() => handleNumberClick(num)}
                   className={`rounded-2xl font-bold transition duration-300 shadow-md h-16 w-16 ${
-                    (num % 13) % 2 === 0
+                    clickedNumbers.includes(num)
+                      ? "bg-gray-500 text-white hover:bg-gray-600"
+                      : (num % 13) % 2 === 0
                       ? `bg-${primaryColor} text-white hover:bg-${hoverColor}`
                       : "bg-black text-white hover:bg-gray-800"
                   }`}
                   style={{
-                    backgroundColor:
-                      (num % 13) % 2 === 0 ? primaryColor : "#000000",
+                    backgroundColor: clickedNumbers.includes(num)
+                      ? "#A9A9A9"
+                      : (num % 13) % 2 === 0
+                      ? primaryColor
+                      : "#000000",
                     borderColor: hoverColor,
                   }}
                 >
@@ -115,7 +130,7 @@ GameBody.propTypes = {
 };
 
 GameBody.defaultProps = {
-  initialTotalAmount: 500,
+  initialTotalAmount: 0,
   maxAmount: 5000,
   numbers: Array.from({ length: 100 }, (_, i) => i),
   primaryColor: "#FFD700", // Default to yellow
